@@ -7,5 +7,8 @@ public abstract class Plant : MonoBehaviour
     public int Damage;
     public List<GameObject> zombies;
 
-    public abstract void attack();
+    public void ReceiveDamage(int damage)
+    {
+        Health -= damage;
+    }
 }

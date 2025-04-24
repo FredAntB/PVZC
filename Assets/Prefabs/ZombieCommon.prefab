@@ -281,6 +281,7 @@ MonoBehaviour:
   Health: 200
   Damage: 20
   Speed: 0.06
+  eatCooldown: 2
 --- !u!50 &6706938909008165159
 Rigidbody2D:
   serializedVersion: 5

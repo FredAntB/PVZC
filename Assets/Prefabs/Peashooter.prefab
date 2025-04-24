@@ -623,10 +623,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7535203e4c7f446f7ab368c451879f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 100
   Damage: 50
   zombies: []
-  attackCooldown: 2
+  attackCooldown: 1
   isAttacking: 0
   Bullet: {fileID: 8351937512793969218, guid: 776d9da0bc7294c3a86cf05fe6e919d8, type: 3}
   Zombie: {fileID: 0}

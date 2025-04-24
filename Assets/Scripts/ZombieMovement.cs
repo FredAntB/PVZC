@@ -7,6 +7,7 @@ public class ZombieMovement : MonoBehaviour
     public float Speed;
     private bool isEating;
 
+
     private void Start()
     {
         isEating = false;

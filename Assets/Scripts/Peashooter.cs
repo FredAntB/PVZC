@@ -18,7 +18,7 @@ public class Peashooter : Plant
         isAttacking = false;
     }
 
-    public override void attack()
+    public void attack()
     {
         if (attackTime <= Time.time)
         {
@@ -30,6 +30,12 @@ public class Peashooter : Plant
 
     public void Update()
     {
+        if (Health <= 0)
+        {
+            transform.parent.GetComponent<plantContainer>().isFull = false;
+            Destroy(this.gameObject);
+        }
+
         if (zombies.Count > 0 && !isAttacking)
         {
             Zombie = zombies[0];
@@ -37,6 +43,7 @@ public class Peashooter : Plant
         }
         else if (zombies.Count == 0 && isAttacking)
         {
+            Zombie = null;
             isAttacking = false;
         }
 

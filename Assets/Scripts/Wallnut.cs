@@ -2,5 +2,12 @@ using UnityEngine;
 
 public class Wallnut : Plant
 {
-    public override void attack() {}
+    public void Update()
+    {
+        if (Health <= 0)
+        {
+            transform.parent.GetComponent<plantContainer>().isFull = false;
+            Destroy(this.gameObject);
+        }
+    }
 }
