@@ -24,7 +24,7 @@ public class Peashooter : Plant
         {
             GameObject bullet = Instantiate(Bullet, transform.position + new Vector3(10f, 18f, 0f), Quaternion.identity, transform);
             bullet.GetComponent<Bullet>().SetDamage(Damage);
-            attackTime = Time.time + attackCooldown;
+            attackTime = Time.time + attackCooldown*Time.deltaTime;
         }
     }
 

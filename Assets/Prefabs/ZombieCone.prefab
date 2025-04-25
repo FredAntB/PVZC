@@ -359,7 +359,7 @@ MonoBehaviour:
   half_arm: {fileID: -6442252876055831150, guid: a3f3e92fac2584ace980c9351724e26c, type: 3}
   Health: 550
   Damage: 24
-  Speed: 0.2
+  Speed: 58
   eatCooldown: 1
   lastTimeEaten: 0
   animator: {fileID: -1662225001026650559}

@@ -20,7 +20,7 @@ public class updateSun : MonoBehaviour, IPointerClickHandler
     private void Update() {
         if (transform.position.y > minHeight)
         {
-            transform.position += new Vector3(0f, -0.1f, 0f);
+            transform.position += new Vector3(0f, -4f, 0f);
         }
     }
 
