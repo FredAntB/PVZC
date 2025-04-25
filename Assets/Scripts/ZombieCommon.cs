@@ -8,8 +8,8 @@ public class ZombieCommon : ZombieMovement
 
         if (Health <= 0)
         {
+            animator.SetTrigger("die");
             transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
-            Destroy(this.gameObject);
         }
         else if (Health <= 100)
         {

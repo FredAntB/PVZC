@@ -360,7 +360,7 @@ MonoBehaviour:
   Health: 750
   Damage: 30
   Speed: 0.03
-  eatCooldown: 2
+  eatCooldown: 1
   lastTimeEaten: 0
   animator: {fileID: -2096138087469766584}
   Bucket: {fileID: 1882496789022277904}

@@ -7,14 +7,15 @@ public class ZombieBucket : ZombieMovement
     public Sprite Bucket_damaged;
     public Sprite Bucket_broken;
 
-    public override void ReceiveDamage(int Damage)
+     public override void ReceiveDamage(int Damage)
     {
         Health -= Damage;
 
         if (Health <= 0)
         {
+            animator.SetTrigger("die");
+            Bucket.enabled = false;
             transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
-            Destroy(this.gameObject);
         }
         else if (Health <= 100)
         {

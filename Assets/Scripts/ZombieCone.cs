@@ -13,8 +13,9 @@ public class ZombieCone : ZombieMovement
 
         if (Health <= 0)
         {
+            animator.SetTrigger("die");
+            Cone.enabled = false;
             transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
-            Destroy(this.gameObject);
         }
         else if (Health <= 100)
         {

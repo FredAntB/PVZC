@@ -57,4 +57,9 @@ public abstract class ZombieMovement : MonoBehaviour
     }
 
     public abstract void ReceiveDamage(int Damage);
+
+    public void Die()
+    {
+        Destroy(this.gameObject);
+    }
 }

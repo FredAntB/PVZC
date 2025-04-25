@@ -359,7 +359,7 @@ MonoBehaviour:
   Health: 300
   Damage: 20
   Speed: 0.05
-  eatCooldown: 2
+  eatCooldown: 1
   lastTimeEaten: 0
   animator: {fileID: 6330197391905167179}
 --- !u!95 &6330197391905167179
@@ -413,8 +413,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6026654724802314388}
   - {fileID: 4746283124002777845}
+  - {fileID: 6026654724802314388}
   - {fileID: 8011388227833202654}
   m_Father: {fileID: 4450876320201742481}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
