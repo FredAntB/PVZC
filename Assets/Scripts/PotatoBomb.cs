@@ -11,6 +11,18 @@ public class PotatoBomb : Plant
 
     private ZombieMovement Zombie;
 
+    protected void EraseAfterExplode()
+    {
+        Destroy(this.gameObject);
+    }
+
+    private void Explode()
+    {
+        animator.SetTrigger("explode");
+        Zombie.ReceiveDamage(Damage);
+        Zombie = null;
+    }
+
     public void Awake()
     {
         isSleeping = true;
@@ -20,6 +32,11 @@ public class PotatoBomb : Plant
 
     public void Update()
     {
+        if (!isSleeping && Zombie is not null)
+        {
+            Explode();
+        }
+
         if (Health <= 0)
         {
             transform.parent.GetComponent<plantContainer>().isFull = false;
@@ -31,12 +48,6 @@ public class PotatoBomb : Plant
             isSleeping = false;
             animator.SetBool("isSleeping", isSleeping);
         }
-
-        if (!isSleeping && Zombie is not null)
-        {
-            Zombie.ReceiveDamage(Damage);
-            Destroy(this.gameObject);
-        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -44,14 +55,11 @@ public class PotatoBomb : Plant
         // zombie collides with any object at layer 9 => zombies
         if(collision.gameObject.layer == 9)
         {
+            Zombie = collision.gameObject.GetComponent<ZombieMovement>();
+            
             if (!isSleeping)
             {
-                collision.gameObject.GetComponent<ZombieMovement>().ReceiveDamage(Damage);
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                Zombie = collision.gameObject.GetComponent<ZombieMovement>();
+                Explode();
             }
         }
     }
