@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour
         {
             StopCoroutine("SpawnSuns");
             youWinImage.transform.Translate(new Vector3(0f, Screen.height * -0.3f, 0f));
-            quitButton.transform.Translate(new Vector3(Screen.width * 0.6f, 0, 0f));
+            quitButton.transform.Translate(new Vector3(Screen.width * 0.55f, 0, 0f));
             buttonsAligned = true;
         }
     }
