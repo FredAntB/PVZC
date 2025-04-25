@@ -234,9 +234,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450876320201742481}
-  - component: {fileID: 6049384356456330626}
   - component: {fileID: -5875668303844655376}
   - component: {fileID: 1622936410201597668}
+  - component: {fileID: 6630306077002345723}
   m_Layer: 9
   m_Name: ZombieBucket
   m_TagString: Untagged
@@ -267,22 +267,6 @@ Transform:
   - {fileID: 6233565569746663621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6049384356456330626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489113535174040983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd5c2a4543ae46caaa644bf3a91958c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 1300
-  Damage: 130
-  Speed: 0.04
-  eatCooldown: 2
 --- !u!50 &-5875668303844655376
 Rigidbody2D:
   serializedVersion: 5
@@ -356,6 +340,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 100, y: 140}
   m_EdgeRadius: 0
+--- !u!114 &6630306077002345723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489113535174040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8eb2357880d4412e9c49e2469148e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outer_arm_top: {fileID: 1565494774257846472}
+  outer_arm_bottom: {fileID: 7963480028193019493}
+  outer_hand: {fileID: 8780424926115616708}
+  half_arm: {fileID: -6442252876055831150, guid: a3f3e92fac2584ace980c9351724e26c, type: 3}
+  Health: 750
+  Damage: 30
+  Speed: 0.03
+  eatCooldown: 2
+  lastTimeEaten: 0
+  Bucket: {fileID: 1882496789022277904}
+  Bucket_damaged: {fileID: 410914314787930165, guid: 1c500052aefee4e3a9951f0757d86e8b, type: 3}
+  Bucket_broken: {fileID: -7461166183057484176, guid: 43fe72421f96f401b9d5e207be599b62, type: 3}
 --- !u!1 &1911657452313456270
 GameObject:
   m_ObjectHideFlags: 0

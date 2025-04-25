@@ -234,9 +234,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450876320201742481}
-  - component: {fileID: -1409336993333667723}
   - component: {fileID: 3369072346954576998}
   - component: {fileID: -2421669990964787893}
+  - component: {fileID: 774089185070881969}
   m_Layer: 9
   m_Name: ZombieCone
   m_TagString: Untagged
@@ -267,22 +267,6 @@ Transform:
   - {fileID: 6233565569746663621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1409336993333667723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489113535174040983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd5c2a4543ae46caaa644bf3a91958c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 560
-  Damage: 56
-  Speed: 0.05
-  eatCooldown: 2
 --- !u!50 &3369072346954576998
 Rigidbody2D:
   serializedVersion: 5
@@ -356,6 +340,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 100, y: 140}
   m_EdgeRadius: 0
+--- !u!114 &774089185070881969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489113535174040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c4cc9bad2a74df898e87f0c2ec8ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outer_arm_top: {fileID: 1565494774257846472}
+  outer_arm_bottom: {fileID: 7963480028193019493}
+  outer_hand: {fileID: 8780424926115616708}
+  half_arm: {fileID: -6442252876055831150, guid: a3f3e92fac2584ace980c9351724e26c, type: 3}
+  Health: 550
+  Damage: 24
+  Speed: 0.04
+  eatCooldown: 2
+  lastTimeEaten: 0
+  Cone: {fileID: 5481166575176303750}
+  Cone_damaged: {fileID: 5074050892660370001, guid: 4364851b9872249b4930901972ce97a7, type: 3}
+  Cone_broken: {fileID: 2103718587794064389, guid: 8f4fd171db8d843bcb41a5312264e6ea, type: 3}
 --- !u!1 &1911657452313456270
 GameObject:
   m_ObjectHideFlags: 0

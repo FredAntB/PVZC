@@ -7,8 +7,10 @@ public abstract class Plant : MonoBehaviour
     public int Damage;
     public List<GameObject> zombies;
 
-    public void ReceiveDamage(int damage)
+    public bool ReceiveDamage(int damage)
     {
         Health -= damage;
+        return Health <= 0;
+
     }
 }

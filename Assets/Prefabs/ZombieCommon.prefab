@@ -234,9 +234,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450876320201742481}
-  - component: {fileID: 7611311564798906610}
   - component: {fileID: 6706938909008165159}
   - component: {fileID: 3218009569954721076}
+  - component: {fileID: 1248640974721038703}
   m_Layer: 9
   m_Name: ZombieCommon
   m_TagString: Untagged
@@ -266,22 +266,6 @@ Transform:
   - {fileID: 6233565569746663621}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7611311564798906610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489113535174040983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbd5c2a4543ae46caaa644bf3a91958c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 200
-  Damage: 20
-  Speed: 0.06
-  eatCooldown: 2
 --- !u!50 &6706938909008165159
 Rigidbody2D:
   serializedVersion: 5
@@ -355,6 +339,27 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 100, y: 140}
   m_EdgeRadius: 0
+--- !u!114 &1248640974721038703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489113535174040983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb76b67e0ad4450395653232ff63309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outer_arm_top: {fileID: 1565494774257846472}
+  outer_arm_bottom: {fileID: 7963480028193019493}
+  outer_hand: {fileID: 8263969541412055397}
+  half_arm: {fileID: -6442252876055831150, guid: a3f3e92fac2584ace980c9351724e26c, type: 3}
+  Health: 300
+  Damage: 20
+  Speed: 0.05
+  eatCooldown: 2
+  lastTimeEaten: 0
 --- !u!1 &1911657452313456270
 GameObject:
   m_ObjectHideFlags: 0

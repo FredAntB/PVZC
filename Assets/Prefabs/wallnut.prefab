@@ -137,9 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fae64054385440aacfb223e5f984df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 200
+  Health: 240
   Damage: 0
   zombies: []
+  wallnutImage: {fileID: 4746730051765988761}
+  walnutCracked: {fileID: 3070240530708547946, guid: d60e6e56c05644a3e852ab9a1a51a301, type: 3}
+  walnutFinalCrack: {fileID: 7384394717594741680, guid: adcb8becaa97b4809b921886691c9150, type: 3}
 --- !u!95 &-6758510299446022995
 Animator:
   serializedVersion: 7

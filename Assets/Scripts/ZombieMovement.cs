@@ -1,22 +1,41 @@
+using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class ZombieMovement : MonoBehaviour
+public abstract class ZombieMovement : MonoBehaviour
 {
+    public Image outer_arm_top;
+    public Image outer_arm_bottom;
+    public Image outer_hand;
+    public Sprite half_arm;
+    
     public int Health;
     public int Damage;
     public float Speed;
     private bool isEating;
 
+    private Plant Food; // plant being eaten
+    public float eatCooldown;
+    public float lastTimeEaten;
+
 
     private void Start()
     {
         isEating = false;
+        lastTimeEaten = 0;
+        Food = null;
     }
 
     public void Update() {
         if (!isEating)
         {
+            Food = null;
             transform.Translate(new Vector3(Speed * -1, 0f, 0f));
+        }
+        else if(Food != null && lastTimeEaten <= Time.time)
+        {
+            isEating = !Food.ReceiveDamage(Damage);
+            lastTimeEaten = eatCooldown + Time.time;
         }
     }
 
@@ -26,16 +45,9 @@ public class ZombieMovement : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             isEating = true;
+            Food = collision.gameObject.GetComponent<Plant>();
         }
     }
 
-    public void ReceiveDamage(int Damage)
-    {
-        Health -= Damage;
-        if (Health <= 0)
-        {
-            transform.parent.GetComponent<SpawnPoint>().zombies.Remove(this.gameObject);
-            Destroy(this.gameObject);
-        }
-    }
+    public abstract void ReceiveDamage(int Damage);
 }
