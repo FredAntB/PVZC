@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: -5875668303844655376}
   - component: {fileID: 1622936410201597668}
   - component: {fileID: 6630306077002345723}
+  - component: {fileID: -2096138087469766584}
   m_Layer: 9
   m_Name: ZombieBucket
   m_TagString: Untagged
@@ -361,9 +362,32 @@ MonoBehaviour:
   Speed: 0.03
   eatCooldown: 2
   lastTimeEaten: 0
+  animator: {fileID: -2096138087469766584}
   Bucket: {fileID: 1882496789022277904}
   Bucket_damaged: {fileID: 410914314787930165, guid: 1c500052aefee4e3a9951f0757d86e8b, type: 3}
   Bucket_broken: {fileID: -7461166183057484176, guid: 43fe72421f96f401b9d5e207be599b62, type: 3}
+--- !u!95 &-2096138087469766584
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489113535174040983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2bbdb24c6648249ff87cf9c8c133bcca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1911657452313456270
 GameObject:
   m_ObjectHideFlags: 0

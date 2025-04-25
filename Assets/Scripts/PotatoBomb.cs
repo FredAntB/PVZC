@@ -29,7 +29,7 @@ public class PotatoBomb : Plant
         if (sleepTime <= Time.time - startTime)
         {
             isSleeping = false;
-            animator.SetBool("isNotSleeping", !isSleeping);
+            animator.SetBool("isSleeping", isSleeping);
         }
 
         if (!isSleeping && Zombie is not null)

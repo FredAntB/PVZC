@@ -18,6 +18,8 @@ public abstract class ZombieMovement : MonoBehaviour
     public float eatCooldown;
     public float lastTimeEaten;
 
+    public Animator animator;
+
 
     private void Start()
     {
@@ -27,6 +29,11 @@ public abstract class ZombieMovement : MonoBehaviour
     }
 
     public void Update() {
+        if (animator.GetBool("isEating") != isEating)
+        {
+            animator.SetBool("isEating", isEating);
+        }
+        
         if (!isEating)
         {
             Food = null;
