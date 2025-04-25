@@ -11,6 +11,10 @@ public class Manager : MonoBehaviour
     public GameObject currentContainer;
     public TMP_Text sunCounter;
 
+    public GameObject youWinImage;
+    public GameObject quitButton;
+    public zombieSpawner spawner;
+
     private cardBehaviour card;
 
     public static Manager manager;
@@ -18,6 +22,16 @@ public class Manager : MonoBehaviour
     private void Awake() {
         manager = this;
         StartCoroutine("SpawnSuns");
+    }
+
+    public void Update()
+    {
+        if (spawner.zombieCount <= 0)
+        {
+            StopCoroutine("SpawnSuns");
+            youWinImage.transform.Translate(new Vector3(0f, 202f, 0f));
+            quitButton.transform.Translate(new Vector3(0f, 202f, 0f));
+        }
     }
 
     public void PlacePlant()

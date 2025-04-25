@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public abstract class ZombieMovement : MonoBehaviour
@@ -53,6 +54,10 @@ public abstract class ZombieMovement : MonoBehaviour
         {
             isEating = true;
             Food = collision.gameObject.GetComponent<Plant>();
+        }
+        else if(collision.gameObject.layer == 11)
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 
