@@ -38,7 +38,9 @@ public abstract class ZombieMovement : MonoBehaviour
         if (!isEating)
         {
             Food = null;
+            this.enabled = false;
             transform.Translate(new Vector3(Speed * -1, 0f, 0f));
+            this.enabled = true;
         }
         else if(Food != null && lastTimeEaten <= Time.time)
         {

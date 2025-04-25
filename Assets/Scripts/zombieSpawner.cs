@@ -8,6 +8,11 @@ public class zombieSpawner : MonoBehaviour
 
     public int zombieCount;
 
+    public void Awake()
+    {
+        zombieCount = zombies.Count;
+    }
+
     public void reduceZombieCountBy(int count)
     {
         zombieCount -= count;
@@ -21,8 +26,6 @@ public class zombieSpawner : MonoBehaviour
                 GameObject zombieInstance = Instantiate(zombiePrefabs[(int)zombie.type], spawner.position + new Vector3(0f, 50f, 0f), Quaternion.identity, spawner);
                 zombie.isSpawned = true;
                 transform.GetChild(zombie.Spawner).GetComponent<SpawnPoint>().zombies.Add(zombieInstance);
-                
-                    zombieCount++;
             }
         }
     }

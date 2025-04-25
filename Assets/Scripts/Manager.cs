@@ -16,21 +16,24 @@ public class Manager : MonoBehaviour
     public zombieSpawner spawner;
 
     private cardBehaviour card;
+    private bool buttonsAligned;
 
     public static Manager manager;
 
     private void Awake() {
         manager = this;
         StartCoroutine("SpawnSuns");
+        buttonsAligned = false;
     }
 
     public void Update()
     {
-        if (spawner.zombieCount <= 0)
+        if (!buttonsAligned && spawner.zombieCount <= 0)
         {
             StopCoroutine("SpawnSuns");
-            youWinImage.transform.Translate(new Vector3(0f, 202f, 0f));
-            quitButton.transform.Translate(new Vector3(0f, 202f, 0f));
+            youWinImage.transform.Translate(new Vector3(0f, -207f, 0f));
+            quitButton.transform.Translate(new Vector3(554f, 0, 0f));
+            buttonsAligned = true;
         }
     }
 
