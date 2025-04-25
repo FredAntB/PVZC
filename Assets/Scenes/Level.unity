@@ -3199,6 +3199,7 @@ MonoBehaviour:
     randomSpawner: 1
     isSpawned: 0
   zombieCount: 0
+  startTime: 3
 --- !u!1001 &958767208
 PrefabInstance:
   m_ObjectHideFlags: 0

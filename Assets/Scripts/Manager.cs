@@ -61,7 +61,7 @@ public class Manager : MonoBehaviour
     public IEnumerator SpawnSuns()
     {
         while(true) {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
 
             Vector3 spawnPoint = new Vector3(Random.Range(-260.0f, 150.0f), 0f, 0f);
             GameObject sun_instance = Instantiate(Sun, SunHolder.transform.position + spawnPoint, Quaternion.identity, SunHolder.transform);

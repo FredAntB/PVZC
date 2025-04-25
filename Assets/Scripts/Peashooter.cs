@@ -22,7 +22,7 @@ public class Peashooter : Plant
     {
         if (attackTime <= Time.time)
         {
-            GameObject bullet = Instantiate(Bullet, transform.position + new Vector3(10f, 18f, 0f), Quaternion.identity, transform);
+            GameObject bullet = Instantiate(Bullet, transform.position + new Vector3(Screen.width * 0.01f, Screen.height * 0.04f, 0f), Quaternion.identity, transform);
             bullet.GetComponent<Bullet>().SetDamage(Damage);
             attackTime = Time.time + attackCooldown*Time.deltaTime;
         }
