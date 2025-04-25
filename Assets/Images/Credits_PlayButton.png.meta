@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c2bbd540da1ee4fa6ac5643cb0dec3e0
+guid: 57e946f642abe47e7bdd81016c84f885
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7945992278206726399
-    second: wavecenter_0
+      213: -8202861765061142536
+    second: Credits_PlayButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wavecenter_0
+      name: Credits_PlayButton_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 324
+        width: 59
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10fbd756f1a2ab190800000000000000
-      internalID: -7945992278206726399
+      spriteID: 8f795ef6fa4992e80800000000000000
+      internalID: -8202861765061142536
       vertices: []
       indices: 
       edges: []

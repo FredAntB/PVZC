@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f249b3f549bea425a8f99b826823c30d
+guid: ef909a9cc483c44e585955e8b3cbf421
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3096543121686355757
-    second: waveside_0
+      213: 3434592893231651313
+    second: PvZ_Logo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: waveside_0
+      name: PvZ_Logo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 324
+        width: 700
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d0a430ef6ed605d0800000000000000
-      internalID: -3096543121686355757
+      spriteID: 1f957250a002aaf20800000000000000
+      internalID: 3434592893231651313
       vertices: []
       indices: 
       edges: []
